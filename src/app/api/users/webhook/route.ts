@@ -7,7 +7,7 @@ import { users } from "@/db/schema"
 
 import { eq } from 'drizzle-orm'
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
     const SIGNING_SECRET = process.env.CLERK_SIGNING_SECRET
 
     if(!SIGNING_SECRET) {
